@@ -1,0 +1,20 @@
+function calculateParallelogramArea(){
+    const base = getInputValueById('parallelogram-base-input');
+    const height = getInputValueById('parallelogram-height-input');
+    area = base * height ;
+    setInnerTextById('parallelogram-display-area',area);
+}
+
+
+function getInputValueById(inputId){
+    const inputFieldValue = document.getElementById(inputId);
+    const inputValueText = inputFieldValue.value;
+    const value = parseFloat(inputValueText);
+    return value;
+}
+
+function setInnerTextById(elementId,area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+    return area;
+} 
